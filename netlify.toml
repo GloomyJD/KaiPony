@@ -1,0 +1,20 @@
+[build]
+    publish = "public/"
+
+[[redirects]]
+    from = "/live/high"
+    to = "http://stream.tilos.hu:8000/tilos"
+    status = 200
+    force = true
+
+[[redirects]]
+    from = "/live/medium"
+    to = "http://stream.tilos.hu/tilos_128.mp3"
+    status = 200
+    force = true
+
+[[redirects]]
+    from = "/live/low"
+    to = "http://stream.tilos.hu/tilos_32.mp3"
+    status = 200
+    force = true
