@@ -13,7 +13,7 @@ Tilos Radio for KaiOS works as the Music app. You can run the app in the backgro
 
 To play or pause the live stream, press the `Enter` key.
 
-~~Use the `Up` and `Down` keys to control the audio volume.~~ 
+Use the `Up` and `Down` keys to control the audio volume. 
 
 ~~You can change the audio quality using the `1` (256 Mbps), `2` (128 Mbps), and `3` (32 Mbps) keys.~~
 
