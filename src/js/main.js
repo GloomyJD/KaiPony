@@ -12,6 +12,8 @@ player.type = 'audio/mpeg';
 player.preload = 'none';
 player.src = LIVE_STREAM_URL;
 
+const volume = navigator.volumeManager;
+
 const softKeyEnterElement = document.querySelector('.softkey__enter');
 
 document.addEventListener('keydown', event => {
@@ -30,4 +32,20 @@ document.addEventListener('keydown', event => {
     }
 
     isPlaying = !isPlaying;
+});
+
+document.addEventListener('keydown', event => {
+    const keyPressed = event.key;
+
+    if (!['ArrowUp', 'ArrowDown'].includes(keyPressed)) {
+        return;
+    }
+
+    if (keyPressed === 'ArrowUp') {
+        volume?.requestUp();
+    }
+
+    if (keyPressed === 'ArrowDown') {
+        volume?.requestDown();
+    }
 });
