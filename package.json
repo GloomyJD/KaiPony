@@ -1,6 +1,6 @@
 {
     "name": "tilos-radio-for-kaios",
-    "version": "0.1.2",
+    "version": "0.1.4",
     "description": "Play the live stream of Tilos Radio",
     "scripts": {
         "dev": "npm run-script copy-static-assets && parcel src/index.html --out-dir build",
