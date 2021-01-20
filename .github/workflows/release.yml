@@ -25,8 +25,7 @@ jobs:
             -   name: Build the App
                 run: |
                     npm install
-                    npm run build
-                    npm run copy-static-to-dist
+                    npm run production
                     zip -r build build/
             -   name: Create Release
                 id: create_release
