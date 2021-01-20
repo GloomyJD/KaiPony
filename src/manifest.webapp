@@ -1,0 +1,36 @@
+{
+    "version": "0.1.0",
+    "name": "Tilos Radio",
+    "description": "Play the live stream of Tilos Radio",
+    "type": "web",
+    "launch_path": "/index.html",
+    "icons": {
+        "56": "/ico/TilosRadio_56.png",
+        "112": "/ico/TilosRadio_112.png"
+    },
+    "theme_color": "#201f1f",
+    "cursor": false,
+    "fullscreen": false,
+    "developer": {
+        "name": "Mészáros Róbert",
+        "url": "https://www.meszarosrob.com"
+    },
+    "categories": [
+        "entertainment"
+    ],
+    "permissions": {
+        "audio-channel-content": {
+            "description": "To play audio files."
+        },
+        "audio-channel-normal": {
+            "description": "To play audio files."
+        }
+    },
+    "locales": {
+        "en-US": {
+            "name": "Tilos Radio",
+            "description": "Play the live stream of Tilos Radio"
+        }
+    },
+    "default_locale": "en-US"
+}

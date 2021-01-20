@@ -1,0 +1,14 @@
+{
+    "name": "tilos-radio-for-kaios",
+    "version": "0.1.0",
+    "description": "Play the live stream of Tilos Radio",
+    "scripts": {
+        "dev": "npm run-script copy-static-assets && parcel src/index.html --out-dir build",
+        "production": "npm run-script copy-static-assets && parcel build src/index.html --out-dir build",
+        "copy-static-assets": "mkdir -p build && cp src/manifest.webapp build && cp -r src/img/ico build"
+    },
+    "devDependencies": {
+        "parcel-bundler": "^1.12.4",
+        "sass": "^1.32.5"
+    }
+}
