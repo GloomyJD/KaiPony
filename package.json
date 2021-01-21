@@ -5,9 +5,16 @@
     "scripts": {
         "dev": "npm run-script copy-static-assets && parcel src/index.html --out-dir build",
         "production": "npm run-script copy-static-assets && parcel build src/index.html --out-dir build",
-        "copy-static-assets": "mkdir -p build && cp src/manifest.webapp build && cp -r src/img/ico build"
+        "copy-static-assets": "mkdir -p build && cp src/manifest.webapp build && cp -r src/img/ico build",
+        "lint": "eslint 'src/**/*.js'",
+        "lint:fix": "eslint 'src/**/*.js' --quiet --fix"
     },
     "devDependencies": {
+        "eslint": "^7.18.0",
+        "eslint-config-standard": "^16.0.2",
+        "eslint-plugin-import": "^2.22.1",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-promise": "^4.2.1",
         "parcel-bundler": "^1.12.4",
         "sass": "^1.32.5"
     }

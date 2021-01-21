@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - Option to set the audio quality for the live stream
+- ESLint for linting the JavaScript files
 
 ### Changes
 - Code blocks for the CLI commands

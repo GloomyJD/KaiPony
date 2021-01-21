@@ -64,6 +64,20 @@ If you want to start a dev server and rebuild the app as you change files, run:
 npm run-script dev
 ```
 
+### Linting the code
+
+Currently, there is only linting for the JavaScript files. Use it by running:
+
+```shell script
+npm run lint
+```
+
+To fix what is possible automatically:
+
+```shell script
+npm run lint:fix
+```
+
 ### Release a new version
 
 Once you documented the notable changes in the [CHANGELOG.md](CHANGELOG.md), run:
