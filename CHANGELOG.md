@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Option to set the audio quality for the live stream
 
+### Changes
+- Code blocks for the CLI commands
+
 ## [0.2.0] - 2021-01-20
 ### Added
 - Ability to change the volume from the app

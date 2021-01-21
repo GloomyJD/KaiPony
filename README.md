@@ -54,24 +54,32 @@ Having the entire archive accessible through the app would be nice, but at the m
 
 Assuming you have Node.js and npm on the machine, after installing the packages, run:
 
-`npm run-script production`
+```shell script
+npm run-script production
+```
 
 If you want to start a dev server and rebuild the app as you change files, run: 
 
-`npm run-script dev`
+```shell script
+npm run-script dev
+```
 
 ### Release a new version
 
 Once you documented the notable changes in the [CHANGELOG.md](CHANGELOG.md), run:
 
-`./bin/update-version.sh 1.0.0`
+```shell script
+./bin/update-version.sh 1.0.0
+```
 
 The script uses [jq](https://stedolan.github.io/jq/) for processing the JSON files.
 If you don't have it installed, you can change the version manually in the files.
 
 Commit the changes and create a new Git tag using the version you chose but prefix it with a `v`:
 
-`git tag v1.0.0`
+```shell script
+git tag v1.0.0
+```
 
 Pushing a new tag will kick-start the [release workflow](.github/workflows/release.yml).
 It will build the app and make it available for download as a ZIP file, and it will prepare the release note based on the changelog.
