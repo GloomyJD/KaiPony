@@ -15,7 +15,7 @@ To play or pause the live stream, press the `Enter` key.
 
 Use the `Up` and `Down` keys to control the audio volume. 
 
-~~You can change the audio quality using the `1` (256 Mbps), `2` (128 Mbps), and `3` (32 Mbps) keys.~~
+You can change the audio quality using the `1` (256 Mbps), `2` (128 Mbps), and `3` (32 Mbps) keys.
 
 ## Installation
 

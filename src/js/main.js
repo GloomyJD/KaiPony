@@ -1,4 +1,6 @@
-const LIVE_STREAM_URL = 'https://tilos-radio-for-kaios.netlify.app/live/medium';
+const LIVE_HIGH_QUALITY_URL = 'https://tilos-radio-for-kaios.netlify.app/live/high';
+const LIVE_MEDIUM_QUALITY_URL = 'https://tilos-radio-for-kaios.netlify.app/live/medium';
+const LIVE_LOW_QUALITY_URL = 'https://tilos-radio-for-kaios.netlify.app/live/low';
 
 if (navigator.mozAudioChannelManager) {
     navigator.mozAudioChannelManager.volumeControlChannel = 'content';
@@ -10,11 +12,12 @@ const player = new Audio();
 player.mozAudioChannelType = 'content';
 player.type = 'audio/mpeg';
 player.preload = 'none';
-player.src = LIVE_STREAM_URL;
+player.src = LIVE_MEDIUM_QUALITY_URL;
 
 const volume = navigator.volumeManager;
 
 const softKeyEnterElement = document.querySelector('.softkey__enter');
+const mbpsRateElement = document.querySelector('.mbps__rate');
 
 document.addEventListener('keydown', event => {
     const keyPressed = event.key;
@@ -47,5 +50,36 @@ document.addEventListener('keydown', event => {
 
     if (keyPressed === 'ArrowDown') {
         volume?.requestDown();
+    }
+});
+
+document.addEventListener('keydown', event => {
+    const keyPressed = event.key;
+
+    if (!['1', '2', '3'].includes(keyPressed)) {
+        return;
+    }
+
+    if (isPlaying) {
+        player.pause();
+    }
+
+    if (keyPressed === '1') {
+        player.src = LIVE_HIGH_QUALITY_URL;
+        mbpsRateElement.innerHTML = '256';
+    }
+
+    if (keyPressed === '2') {
+        player.src = LIVE_MEDIUM_QUALITY_URL;
+        mbpsRateElement.innerHTML = '128';
+    }
+
+    if (keyPressed === '3') {
+        player.src = LIVE_LOW_QUALITY_URL;
+        mbpsRateElement.innerHTML = '32';
+    }
+
+    if (isPlaying) {
+        player.play();
     }
 });
