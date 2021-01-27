@@ -44,13 +44,13 @@ See the [CHANGELOG.md](CHANGELOG.md).
 Assuming you have Node.js and npm on the machine, after installing the packages, run:
 
 ```shell script
-npm run-script production
+npm run production
 ```
 
 If you want to start a dev server and rebuild the app as you change files, run: 
 
 ```shell script
-npm run-script dev
+npm run dev
 ```
 
 ### Linting the code
