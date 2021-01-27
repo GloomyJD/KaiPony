@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 - Use the shorthand `run` instead `run-script` in the documentation
+- Move Netlify related stuff to a separate repo
 
 ## [0.3.0] - 2021-01-21
 ### Added

@@ -87,16 +87,9 @@ git tag v1.0.0
 Pushing a new tag will kick-start the [release workflow](.github/workflows/release.yml).
 It will build the app and make it available for download as a ZIP file, and it will prepare the release note based on the changelog.
 
-## Misc and plans
+## Netlify site
 
-The app uses [`tilos-radio-for-kaios.netlify.app`](https://tilos-radio-for-kaios.netlify.app/) instead [`stream.tilos.hu`](http://stream.tilos.hu/)  for audio streaming because the URL has to be under `HTTPS` due to security.
-Setting up a [proxy](https://docs.netlify.com/routing/redirects/rewrites-proxies/#proxy-to-another-service) was a workaround, and hopefully, I can remove it in the future.
-
-I wish to display the current show's name and its schedule in an upcoming release, but currently, this is not possible due to the Tilos Radio API's [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) configuration.
-
-The `public` folder is for the Netlify website. 
-
-Having the entire archive accessible through the app would be nice, but at the moment, it's out of scope.
+A proxy site was set up to stream the audio and display the daily schedule. Find out [more about it here](https://github.com/meszarosrob/tilos-radio-for-kaios-netlify).
 
 ## Contributing
 
