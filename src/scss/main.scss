@@ -36,10 +36,21 @@ body {
     }
 }
 
-.mbps {
+.show, .mbps {
     text-align: center;
     color: white;
     font-size: 1.4em;
+}
+
+.show {
+    line-height: 1.5;
+
+    &__name {
+        font-weight: bold;
+    }
+}
+
+.mbps {
     opacity: .6;
 }
 
