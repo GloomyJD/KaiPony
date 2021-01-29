@@ -16,8 +16,16 @@ player.src = LIVE_MEDIUM_QUALITY_URL;
 
 const volume = navigator.volumeManager;
 
+const offlineElement = document.querySelector('.offline');
 const softKeyEnterElement = document.querySelector('.softkey__enter');
 const mbpsRateElement = document.querySelector('.mbps__rate');
+
+const toggleOfflineAlert = () => {
+    const isOnline = navigator.onLine;
+    const toggle = isOnline ? 'add' : 'remove';
+
+    offlineElement.classList[toggle]('hidden');
+};
 
 document.addEventListener('keydown', event => {
     const keyPressed = event.key;
@@ -83,3 +91,9 @@ document.addEventListener('keydown', event => {
         player.play();
     }
 });
+
+window.addEventListener('online', toggleOfflineAlert);
+
+window.addEventListener('offline', toggleOfflineAlert);
+
+toggleOfflineAlert();

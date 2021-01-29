@@ -13,6 +13,18 @@ body {
     min-height: 100vh;
 }
 
+.offline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100% - 2rem);
+    padding: 1rem;
+    background: #ad2d1e;
+    color: white;
+    font-size: 1.4em;
+    text-align: center;
+}
+
 .main {
     height: calc(100vh - 3rem);
     display: flex;
@@ -57,4 +69,8 @@ body {
         text-transform: uppercase;
         font-weight: bold;
     }
+}
+
+.hidden {
+    display: none !important;
 }
