@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Use the shorthand `run` instead `run-script` in the documentation
 - Move Netlify related stuff to a separate repo
 - Show no internet connection alert
+- Display the name and schedule of live show
 
 ## [0.3.0] - 2021-01-21
 ### Added

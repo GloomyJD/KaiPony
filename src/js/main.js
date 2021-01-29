@@ -1,6 +1,7 @@
 const LIVE_HIGH_QUALITY_URL = 'https://tilos-radio-for-kaios.netlify.app/live/high';
 const LIVE_MEDIUM_QUALITY_URL = 'https://tilos-radio-for-kaios.netlify.app/live/medium';
 const LIVE_LOW_QUALITY_URL = 'https://tilos-radio-for-kaios.netlify.app/live/low';
+const DAILY_SCHEDULE_URL = 'https://tilos-radio-for-kaios.netlify.app/daily-schedule.json';
 
 if (navigator.mozAudioChannelManager) {
     navigator.mozAudioChannelManager.volumeControlChannel = 'content';
@@ -95,5 +96,34 @@ document.addEventListener('keydown', event => {
 window.addEventListener('online', toggleOfflineAlert);
 
 window.addEventListener('offline', toggleOfflineAlert);
+
+const showNameElement = document.querySelector('.show__name');
+const showScheduleFromElement = document.querySelector('.show__from');
+const showScheduleUntilElement = document.querySelector('.show__until');
+
+const formattedTime = (timestamp) => {
+    const date = new Date(timestamp);
+
+    const asDoubleDigit = (hourOrMinute) => {
+        return String(hourOrMinute).padStart(2, '0');
+    };
+
+    return `${asDoubleDigit(date.getHours())}:${asDoubleDigit(date.getMinutes())}`;
+};
+
+fetch(DAILY_SCHEDULE_URL).then(response => response.json()).then(data => {
+    const nowTime = new Date().getTime();
+    const matchedEpisodes = data.filter(episode => episode.plannedFrom <= nowTime && episode.plannedTo > nowTime);
+
+    if (matchedEpisodes.length === 0) {
+        return;
+    }
+
+    const currentEpisode = matchedEpisodes[0];
+
+    showNameElement.innerHTML = currentEpisode.show.name;
+    showScheduleFromElement.innerHTML = formattedTime(currentEpisode.plannedFrom);
+    showScheduleUntilElement.innerHTML = formattedTime(currentEpisode.plannedTo);
+});
 
 toggleOfflineAlert();
