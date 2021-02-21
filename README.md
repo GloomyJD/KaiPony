@@ -15,6 +15,12 @@ Use the `Up` and `Down` keys to control the audio volume. (On the Nokia 2720 or 
 
 You can change the station by using the `1`, `2`, `3` keys.
 
+1: PonyvilleFM 1
+
+2: PonyvilleFM 2
+
+3: PonyvilleFM 1 (HQ Stream)
+
 ## Installation
 
 The app is not available through the [KaiStore](https://www.kaiostech.com/store/)
