@@ -1,16 +1,16 @@
 {
-    "name": "tilos-radio-for-kaios",
-    "version": "0.3.0",
-    "description": "Play the live stream of Tilos Radio",
+    "name": "KaiPony",
+    "version": "1.0.0",
+    "description": "Listen to Ponyville FM on KaiOS!",
     "scripts": {
         "dev": "npm run-script copy-static-assets && parcel src/index.html --out-dir build",
         "production": "npm run-script copy-static-assets && parcel build src/index.html --out-dir build",
-        "copy-static-assets": "mkdir -p build && cp src/manifest.webapp build && cp -r src/img/ico build",
-        "lint": "eslint 'src/**/*.js'",
+        "copy-static-assets": "mkdir build && cp src/manifest.webapp build && cp -r src/img/ico build",
+        "lint": "eslint src/js/*.js",
         "lint:fix": "eslint 'src/**/*.js' --quiet --fix"
     },
     "devDependencies": {
-        "eslint": "^7.18.0",
+        "eslint": "^7.20.0",
         "eslint-config-standard": "^16.0.2",
         "eslint-plugin-import": "^2.22.1",
         "eslint-plugin-node": "^11.1.0",

@@ -6,7 +6,8 @@
     "launch_path": "/index.html",
     "icons": {
         "56": "/ico/KaiPony_56.png",
-        "112": "/ico/KaiPony_112.png"
+        "112": "/ico/KaiPony_112.png",
+        "128": "/ico/KaiPony_128.png"
     },
     "theme_color": "#201f1f",
     "cursor": false,

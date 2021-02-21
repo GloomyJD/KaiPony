@@ -1,7 +1,11 @@
 const LIVE_HIGH_QUALITY_URL = 'https://dj.bronyradio.com/streamhq.mp3';
 const LIVE_MEDIUM_QUALITY_URL = 'https://dj.bronyradio.com/stream.mp3';
-const LIVE_PVFM2_URL = 'https://tilos-radio-for-kaios.netlify.app/live/low';
-const DAILY_SCHEDULE_URL = 'https://tilos-radio-for-kaios.netlify.app/daily-schedule.json';
+const LIVE_PVFM2_URL = 'http://s5radio.ponyvillelive.com:8026/stream.mp3';
+/* const DAILY_SCHEDULE_URL = 'https://tilos-radio-for-kaios.netlify.app/daily-schedule.json'; */
+
+/* https://dj.bronyradio.com/stream.mp3
+https://tilos-radio-for-kaios.netlify.app/live/low
+*/
 
 if (navigator.mozAudioChannelManager) {
     navigator.mozAudioChannelManager.volumeControlChannel = 'content';
@@ -101,10 +105,10 @@ window.addEventListener('online', toggleOfflineAlert);
 
 window.addEventListener('offline', toggleOfflineAlert);
 
-/*const showScheduleFromElement = document.querySelector('.show__from');
-const showScheduleUntilElement = document.querySelector('.show__until');*/
+/* const showScheduleFromElement = document.querySelector('.show__from');
+const showScheduleUntilElement = document.querySelector('.show__until'); */
 
-const formattedTime = (timestamp) => {
+/* const formattedTime = (timestamp) => {
     const date = new Date(timestamp);
 
     const asDoubleDigit = (hourOrMinute) => {
@@ -112,9 +116,9 @@ const formattedTime = (timestamp) => {
     };
 
     return `${asDoubleDigit(date.getHours())}:${asDoubleDigit(date.getMinutes())}`;
-};
+}; */
 
-/*fetch(DAILY_SCHEDULE_URL).then(response => response.json()).then(data => {
+/* fetch(DAILY_SCHEDULE_URL).then(response => response.json()).then(data => {
     const nowTime = new Date().getTime();
     const matchedEpisodes = data.filter(episode => episode.plannedFrom <= nowTime && episode.plannedTo > nowTime);
 
@@ -127,6 +131,6 @@ const formattedTime = (timestamp) => {
     showNameElement.innerHTML = currentEpisode.show.name;
     showScheduleFromElement.innerHTML = formattedTime(currentEpisode.plannedFrom);
     showScheduleUntilElement.innerHTML = formattedTime(currentEpisode.plannedTo);
-});*/
+}); */
 
 toggleOfflineAlert();
