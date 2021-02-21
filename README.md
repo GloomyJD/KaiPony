@@ -1,35 +1,32 @@
-# [Tilos Radio](https://tilos.hu/page/english) for [KaiOS](https://www.kaiostech.com/)
+# [KaiPony] for [KaiOS](https://www.kaiostech.com/)
 
-This (unofficial) app allows you to play Tilos Radio's live stream while walking with your phone in your pocket.
+This app is based entirely on:
+[Tilos Radio](https://tilos.hu/page/english) for [KaiOS](https://www.kaiostech.com/)
+Please go give them some love if you like this! They've done all of the awesome work...
 
-This is currently impossible if you listen to the live stream using the KaiOS browser.
-The browser default behavior is to stop all media when the screen is locked, or you navigate to another page, or when you quit the browser.  
-
-Tilos Radio for KaiOS works as the Music app. You can run the app in the background without interrupting the audio.
+This KaiOS app allows you to stream the Ponyville FM stations on your KaiOS device. It's completely 100% unofficial and a little project I made entirely just for my own use.
+(Please don't bother them if something in this breaks!)
 
 ## User guide
 
-![Preview of the app](app-preview.png)
+To play or pause the current stream, press the `Enter` or `OK` key.
 
-To play or pause the live stream, press the `Enter` key.
+Use the `Up` and `Down` keys to control the audio volume. (On the Nokia 2720 or devices with `volume` keys, you can also use these as normal.)
 
-Use the `Up` and `Down` keys to control the audio volume. 
-
-You can change the audio quality using the `1` (256 Mbps), `2` (128 Mbps), and `3` (32 Mbps) keys.
+You can change the station by using the `1`, `2`, `3` keys.
 
 ## Installation
 
 The app is not available through the [KaiStore](https://www.kaiostech.com/store/)
-They are only accepting apps that are [monetized using KaiAds SDK](https://developer.kaiostech.com/submit-to-kaistore), and that's something I'm not interested in integrating.
 
 For this reason, you have to side-load (upload) the app to your phone if you want to use it.
 
 Martin Kaptein wrote a comprehensive, [step-by-step article](https://www.martinkaptein.com/blog/sideloading-and-deploying-apps-to-kai-os/) that you can use to side-load the app.
 If you prefer a video, [this one on YouTube](https://www.youtube.com/watch?v=hQ2EJnNuFz0) walks you through the process.
 
-The Developer Portal also contains a [guide](https://developer.kaiostech.com/getting-started/env-setup/os-env-setup), and if nothing seems to work, you can [ask for help on Discord](https://discord.com/invite/rQ93zEu).
+The Developer Portal also contains a [guide](https://developer.kaiostech.com/getting-started/env-setup/os-env-setup).
 
-You can download the latest version from the [Releases](https://github.com/meszarosrob/tilos-radio-for-kaios/releases) page.
+You can download the latest version from the [Releases](https://github.com/GloomyJD/KaiPony/releases) page.
 
 The app is not auto-updating. To update it, you have to follow the same steps you took when installing it.
 
@@ -106,3 +103,4 @@ If you made a significant improvement, please reach out, and I'll encourage ever
 See the [UNLICENCE](UNLICENSE).
 
 The Tilos Radio logo is (probably) copyrighted to Tilos Cultural Foundation.
+Any Ponyville FM or related logos and such are their own. This project is in no way endorsed by or related to the Ponyville FM team in any way.
