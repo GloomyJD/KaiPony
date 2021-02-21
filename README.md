@@ -1,7 +1,7 @@
 # [KaiPony] for [KaiOS](https://www.kaiostech.com/)
 
 This app is based entirely on:
-[Tilos Radio](https://tilos.hu/page/english) for [KaiOS](https://www.kaiostech.com/)
+[Tilos Radio](https://tilos.hu/page/english) for [KaiOS](https://www.kaiostech.com/).
 Please go give them some love if you like this! They've done all of the awesome work...
 
 This KaiOS app allows you to stream the Ponyville FM stations on your KaiOS device. It's completely 100% unofficial and a little project I made entirely just for my own use.
