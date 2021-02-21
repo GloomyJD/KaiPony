@@ -70,38 +70,11 @@ To fix what is possible automatically:
 npm run lint:fix
 ```
 
-### Release a new version
-
-Once you documented the notable changes in the [CHANGELOG.md](CHANGELOG.md), run:
-
-```shell script
-./bin/update-version.sh 1.0.0
-```
-
-The script uses [jq](https://stedolan.github.io/jq/) for processing the JSON files.
-If you don't have it installed, you can change the version manually in the files.
-
-Commit the changes and create a new Git tag using the version you chose but prefix it with a `v`:
-
-```shell script
-git tag v1.0.0
-```
-
-Pushing a new tag will kick-start the [release workflow](.github/workflows/release.yml).
-It will build the app and make it available for download as a ZIP file, and it will prepare the release note based on the changelog.
-
-## Netlify site
-
-A proxy site was set up to stream the audio and display the daily schedule. Find out [more about it here](https://github.com/meszarosrob/tilos-radio-for-kaios-netlify).
-
 ## Contributing
 
-The issue tracking is disabled and will remain like that.
-If you find a bug, please submit a PR with the fix.
+If you have any improvements to note, just pop something in discussions and I'll take a look when I can.
 
-You are also welcome to submit PR that improves what you read so far.
-
-For other dramatic changes, please fork the project.
+For anything dramatic, or if you want to use this as a base for your own project, please fork the project.
 If you made a significant improvement, please reach out, and I'll encourage everybody to use your version.
 
 ## Copyright
@@ -110,3 +83,5 @@ See the [UNLICENCE](UNLICENSE).
 
 The Tilos Radio logo is (probably) copyrighted to Tilos Cultural Foundation.
 Any Ponyville FM or related logos and such are their own. This project is in no way endorsed by or related to the Ponyville FM team in any way.
+
+The icon uses artwork of Light, my 'sona, drawn by Pon3boi (Bree).
