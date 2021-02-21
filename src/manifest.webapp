@@ -1,19 +1,19 @@
 {
-    "version": "0.3.0",
-    "name": "Tilos Radio",
-    "description": "Play the live stream of Tilos Radio",
+    "version": "1.0.0",
+    "name": "KaiPony",
+    "description": "Listen to Ponyville FM on KaiOS!",
     "type": "web",
     "launch_path": "/index.html",
     "icons": {
-        "56": "/ico/TilosRadio_56.png",
-        "112": "/ico/TilosRadio_112.png"
+        "56": "/ico/KaiPony_56.png",
+        "112": "/ico/KaiPony_112.png"
     },
     "theme_color": "#201f1f",
     "cursor": false,
     "fullscreen": false,
     "developer": {
-        "name": "Mészáros Róbert",
-        "url": "https://www.meszarosrob.com"
+        "name": "Jake Harrison (GloomyJD)",
+        "url": "http://www.gloomyjdsystems.com"
     },
     "categories": [
         "entertainment"
@@ -28,8 +28,8 @@
     },
     "locales": {
         "en-US": {
-            "name": "Tilos Radio",
-            "description": "Play the live stream of Tilos Radio"
+            "name": "KaiPony",
+            "description": "Listen to Ponyville FM on KaiOS!"
         }
     },
     "default_locale": "en-US"

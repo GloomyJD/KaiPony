@@ -1,6 +1,6 @@
-const LIVE_HIGH_QUALITY_URL = 'https://tilos-radio-for-kaios.netlify.app/live/high';
-const LIVE_MEDIUM_QUALITY_URL = 'https://tilos-radio-for-kaios.netlify.app/live/medium';
-const LIVE_LOW_QUALITY_URL = 'https://tilos-radio-for-kaios.netlify.app/live/low';
+const LIVE_HIGH_QUALITY_URL = 'https://dj.bronyradio.com/streamhq.mp3';
+const LIVE_MEDIUM_QUALITY_URL = 'https://dj.bronyradio.com/stream.mp3';
+const LIVE_PVFM2_URL = 'https://tilos-radio-for-kaios.netlify.app/live/low';
 const DAILY_SCHEDULE_URL = 'https://tilos-radio-for-kaios.netlify.app/daily-schedule.json';
 
 if (navigator.mozAudioChannelManager) {
@@ -20,6 +20,7 @@ const volume = navigator.volumeManager;
 const offlineElement = document.querySelector('.offline');
 const softKeyEnterElement = document.querySelector('.softkey__enter');
 const mbpsRateElement = document.querySelector('.mbps__rate');
+const showNameElement = document.querySelector('.show__name');
 
 const toggleOfflineAlert = () => {
     const isOnline = navigator.onLine;
@@ -74,18 +75,21 @@ document.addEventListener('keydown', event => {
     }
 
     if (keyPressed === '1') {
-        player.src = LIVE_HIGH_QUALITY_URL;
-        mbpsRateElement.innerHTML = '256';
+        player.src = LIVE_MEDIUM_QUALITY_URL;
+        mbpsRateElement.innerHTML = '128';
+        showNameElement.innerHTML = 'PonyvilleFM 1';
     }
 
     if (keyPressed === '2') {
-        player.src = LIVE_MEDIUM_QUALITY_URL;
+        player.src = LIVE_PVFM2_URL;
         mbpsRateElement.innerHTML = '128';
+        showNameElement.innerHTML = 'PonyvilleFM 2 (Chill)';
     }
 
     if (keyPressed === '3') {
-        player.src = LIVE_LOW_QUALITY_URL;
-        mbpsRateElement.innerHTML = '32';
+        player.src = LIVE_HIGH_QUALITY_URL;
+        mbpsRateElement.innerHTML = '320';
+        showNameElement.innerHTML = 'PonyvilleFM 1 (HQ Mode)';
     }
 
     if (isPlaying) {
@@ -97,9 +101,8 @@ window.addEventListener('online', toggleOfflineAlert);
 
 window.addEventListener('offline', toggleOfflineAlert);
 
-const showNameElement = document.querySelector('.show__name');
-const showScheduleFromElement = document.querySelector('.show__from');
-const showScheduleUntilElement = document.querySelector('.show__until');
+/*const showScheduleFromElement = document.querySelector('.show__from');
+const showScheduleUntilElement = document.querySelector('.show__until');*/
 
 const formattedTime = (timestamp) => {
     const date = new Date(timestamp);
@@ -111,7 +114,7 @@ const formattedTime = (timestamp) => {
     return `${asDoubleDigit(date.getHours())}:${asDoubleDigit(date.getMinutes())}`;
 };
 
-fetch(DAILY_SCHEDULE_URL).then(response => response.json()).then(data => {
+/*fetch(DAILY_SCHEDULE_URL).then(response => response.json()).then(data => {
     const nowTime = new Date().getTime();
     const matchedEpisodes = data.filter(episode => episode.plannedFrom <= nowTime && episode.plannedTo > nowTime);
 
@@ -124,6 +127,6 @@ fetch(DAILY_SCHEDULE_URL).then(response => response.json()).then(data => {
     showNameElement.innerHTML = currentEpisode.show.name;
     showScheduleFromElement.innerHTML = formattedTime(currentEpisode.plannedFrom);
     showScheduleUntilElement.innerHTML = formattedTime(currentEpisode.plannedTo);
-});
+});*/
 
 toggleOfflineAlert();
